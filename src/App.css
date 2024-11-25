@@ -33,6 +33,12 @@ nav {
   padding: 25px;
 }
 
+.active {
+  border-bottom: 2px solid aliceblue; /* Or any other style you want */
+  color: aliceblue; /* Optional: Change the text color when active */
+  font-weight: 700; /* Optional: Make the active link bold */
+}
+
 .panda-navbar {
   height: 18vh;
 }
@@ -123,6 +129,9 @@ footer {
   margin: 40px 350px;
   padding: 15px;
   color: aliceblue;
+}
+.movie-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .movie-card img {
