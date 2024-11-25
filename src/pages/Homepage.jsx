@@ -6,10 +6,10 @@ const Homepage = ({ movies, setMovies }) => {
     <div className="home-page">
       <h1>Movie Crush</h1>
       <p className="crush-description">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-        maiores recusandae incidunt non illum ad amet tenetur molestias tempore
-        qui corporis a laboriosam ratione, modi voluptates maxime optio?
-        Similique, nesciunt.
+        Your ultimate destination for movies, reviews, and everything cinema.
+        Discover the latest releases, explore hidden gems, and stay up-to-date
+        with all things film. Dive into a world of entertainment, tailored just
+        for you!
       </p>
 
       <div className="movie-list">

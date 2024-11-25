@@ -1,5 +1,6 @@
 import React from "react";
 import NewLogo from "../assets/NewLogo.png";
+import search from "../assets/search.png";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
         <div className="crush-navbar">Random Crush</div>
         <div className="search-box">
           <button className="btn-search">
-            <img src="./assets/search.png" alt="Button Icon" />
+            <img src={search} alt="Button Icon" style={{ height: "35px" }} />
           </button>
         </div>
       </nav>
