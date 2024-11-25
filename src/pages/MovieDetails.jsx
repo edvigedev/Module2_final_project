@@ -37,7 +37,7 @@ const MovieDetails = ({ movies, setMovies }) => {
           </section>
 
           {/* Details Section */}
-          <section>
+          <section className="description-moviedetail">
             <div>
               <p>{movieDetail.description}</p>
 

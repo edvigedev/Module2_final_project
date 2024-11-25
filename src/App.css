@@ -1,6 +1,9 @@
 body {
+  height: 100%;
+  box-sizing: border-box;
   font-size: 16px;
   overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
 }
@@ -45,7 +48,7 @@ nav {
 }
 
 .panda-navbar {
-  height: 18vh;
+  height: 15vh;
 }
 
 .home-page {
@@ -54,7 +57,7 @@ nav {
     #3470c3,
     #1d3e85
   ); /* From blue to dark blue */
-  min-height: 2800px;
+  min-height: 100vh;
 }
 
 .home-page h1 {
@@ -69,7 +72,7 @@ nav {
   margin: 30px 400px;
   text-align: justify;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: 300;
   line-height: 25px;
 }
@@ -80,7 +83,7 @@ footer {
   align-items: center;
   background-color: #3470c3;
   color: aliceblue;
-  height: 10vh;
+  height: 5vh;
   opacity: 85%;
   font-family: Unlock;
 }
@@ -227,30 +230,51 @@ footer {
   margin: 5%;
   width: 80%;
   justify-content: space-around;
+  align-items: center;
   box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
     0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
   border-radius: 10px;
-  padding: 50px;
+  padding: 20px;
 }
 
 .details-poster {
-  height: 20em;
+  height: 30%;
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .text-quick-info-moviedetail {
-  text-align: start;
-  /* background-color: aquamarine; */
-  height: 10vh;
-  margin-top: 8%;
+  line-height: 3;
+  text-align: left;
+  margin: 0 20px;
 }
 
 .text-quick-info-moviedetail h3 {
-  margin: 20px;
-  font-size: 1.5em;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+
+.description-moviedetail {
+  max-width: 800px;
+  margin: 20px auto;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.description-moviedetail h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 /* this is the styling of the about Directors page */
 .about-container {
-  height: 80vh;
+  height: 100vh;
   margin: 90px;
 }
 
@@ -270,21 +294,22 @@ footer {
   padding: 0;
   color: aliceblue;
   background: linear-gradient(to bottom, #3470c3, #1d3e85);
+  height: 100vh;
 }
 
 .tarantino-header {
-  background-color: aliceblue;
+  background-color: #4d7ec4;
   box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
   border-radius: 10px;
-  color: #1d3e85;
+  color: #f3f5f8;
   text-align: center;
   padding: 5px;
   margin: 0px 450px;
 }
 
 .tarantino-header h1 {
-  margin: 0;
-  font-size: 3rem;
+  margin-bottom: 5%;
+  font-size: 2.5rem;
   font-family: "Unlock";
 }
 
