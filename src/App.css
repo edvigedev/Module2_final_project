@@ -10,6 +10,11 @@ h5 {
 
 
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .unlock-regular {
   font-family: "Unlock", serif;
   font-weight: 400;
@@ -36,7 +41,7 @@ nav {
     #3470c3,
     #1d3e85
   ); /* From blue to dark blue */
-  height: 80vh;
+  min-height: 2800px;
 }
 
 .home-page h1 {
@@ -51,6 +56,9 @@ nav {
   margin: 0px 400px;
   text-align: justify;
   color: aliceblue;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
 }
 
 footer {
@@ -101,4 +109,42 @@ footer {
   background-color: transparent;
   pointer-events: painted;
   font-family: Unlock;
+}
+
+.movie-card {
+  background-color: #033d8fae;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Ombres */
+  border-radius: 20px;
+  margin: 30px 350px;
+  padding: 15px;
+  color: aliceblue;
+}
+
+.movie-card img {
+  height: 300px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.movie-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  width: 50%;
+}
+
+.movie-infos a {
+  position: absolute;
+  margin-bottom: 250px;
+  font-size: 21px;
+}
+
+.movie-infos h3 {
+  text-align: justify;
+  font-style: italic;
 }
