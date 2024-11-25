@@ -39,7 +39,10 @@ function App() {
         />
         <Route path="/AboutDirector" element={<AboutDirector />} />
         <Route path="/Tarantino" element={<Tarantino />} />
-        <Route path="/RandomCrush" element={<RandomCrush />} />
+        <Route
+          path="/RandomCrush"
+          element={<RandomCrush movies={movies} setMovies={setMovies} />}
+        />
       </Routes>
       <Movie> </Movie>
 

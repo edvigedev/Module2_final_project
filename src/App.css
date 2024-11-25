@@ -239,3 +239,9 @@ footer {
   list-style: square;
   padding-left: 1.5rem;
 }
+
+/* This is the styling of the random crush page */
+.random-card-container {
+  min-height: 510px;
+  padding-top: 40px;
+}
