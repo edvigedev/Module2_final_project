@@ -17,38 +17,43 @@ const MovieDetails = ({ movies, setMovies }) => {
 
   return (
     <>
-      <h1>{movieDetail.title}</h1>
-      <div>
-        <section>
-          <img
-            src={`http://localhost:5005/images/posters/${movieDetail.poster}`}
-            alt={`${movieDetail.title} Poster`}
-          />
-
-          <div>
-            <h3>{movieDetail.year}</h3>
-            <h3>{movieDetail.duration}</h3>
-            <h3>{movieDetail.quote}</h3>
-          </div>
-        </section>
-
-        {/* Details Section */}
-        <section>
-          <div>
-            <p>{movieDetail.description}</p>
-
-            {/* Actors Section */}
-
+      <div className="movie-details">
+        <h1 className="h1-movieDetail">{movieDetail.title}</h1>
+        <div className="info-movieDetail">
+          <section className="quick-info-movieDetail">
             <div>
-              <h2>Featuring</h2>
+              <img
+                className="details-poster"
+                src={`http://localhost:5005/images/posters/${movieDetail.poster}`}
+                alt={`${movieDetail.title} Poster`}
+              />
+            </div>
+
+            <div className="text-quick-info-moviedetail">
+              <h3> Year: {movieDetail.year}</h3>
+              <h3> Duration: {movieDetail.duration} min.</h3>
+              <h3> "{movieDetail.quote}"</h3>
+            </div>
+          </section>
+
+          {/* Details Section */}
+          <section>
+            <div>
+              <p>{movieDetail.description}</p>
+
+              {/* Actors Section */}
+
               <div>
-                {movieDetail.actors.map((actor) => (
-                  <Actor key={actor.id} actor={actor}></Actor>
-                ))}
+                <h2>Featuring</h2>
+                <div>
+                  {movieDetail.actors.map((actor) => (
+                    <Actor key={actor.id} actor={actor}></Actor>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </>
   );
