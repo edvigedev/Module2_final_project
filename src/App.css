@@ -1,10 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-size: 16px;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 h1,
 h2,
@@ -71,9 +69,9 @@ nav {
   margin: 30px 400px;
   text-align: justify;
   color: aliceblue;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 20px;
+  line-height: 25px;
 }
 
 footer {
@@ -153,11 +151,10 @@ footer {
 }
 
 .movie-card img {
-  height: 250px;
+  height: 280px;
+  width: 200px;
   margin: 5px;
-  width: 100%;
   border-radius: 10px;
-  object-fit: contain;
 }
 
 .movie-card h2 {
@@ -178,7 +175,7 @@ footer {
   justify-content: center;
   text-align: center;
   margin: 20px;
-  width: 100%;
+  width: 50%;
 }
 
 .movie-infos a {
@@ -221,16 +218,19 @@ footer {
 .info-movieDetail {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .quick-info-movieDetail {
+  background-color: #4d7ec4;
   display: flex;
-  margin: 10%;
+  margin: 5%;
   width: 80%;
   justify-content: space-around;
-  box-shadow: 0 10px 12px rgba(253, 252, 252, 0.1),
+  box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
     0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
   border-radius: 10px;
+  padding: 50px;
 }
 
 .details-poster {
@@ -265,7 +265,6 @@ footer {
 
 /* this is the styling of the about tarantino page */
 .tarantino-page {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -274,16 +273,19 @@ footer {
 }
 
 .tarantino-header {
-  background-color: rgba(213, 222, 230, 0.831);
-  border-radius: 5px;
+  background-color: aliceblue;
+  box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
+  border-radius: 10px;
   color: #1d3e85;
   text-align: center;
   padding: 5px;
+  margin: 0px 450px;
 }
 
 .tarantino-header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-family: "Unlock";
 }
 
 .tarantino-header p {
@@ -309,36 +311,24 @@ footer {
 }
 
 .tarantino-info h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .tarantino-details {
   list-style: none;
   padding: 0;
+  margin-bottom: 40px;
 }
 
-.tarantino-details li {
-  margin: 0.5rem 0;
-}
-
-.tarantino-films {
-  padding: 2rem;
-  background-color: #fff;
-}
-
-.tarantino-films h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.tarantino-films ul {
-  list-style: square;
-  padding-left: 1.5rem;
+.tarantino-info p {
+  font-size: 18px;
 }
 
 /* This is the styling of the random crush page */
 .random-card-container {
-  min-height: 510px;
-  padding-top: 40px;
+  min-height: 555px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

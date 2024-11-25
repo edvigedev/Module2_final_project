@@ -4,7 +4,7 @@ const Tarantino = () => {
   return (
     <div className="tarantino-page">
       <header className="tarantino-header">
-        <h1>About Quentin Tarantino</h1>
+        <h1>Quentin Tarantino</h1>
         <p>CANNES, FRANCE - MAY 27, 2023</p>
       </header>
       <section className="tarantino-profile">
@@ -14,13 +14,6 @@ const Tarantino = () => {
           className="tarantino-photo"
         />
         <div className="tarantino-info">
-          <h2>Quentin Tarantino</h2>
-          <p>
-            Quentin Tarantino (born March 27, 1963) is an Oscar-winning
-            filmmaker known for his use of violence, profanity, extended
-            monologues, pop culture references, and recurring cast members like
-            Samuel L. Jackson.
-          </p>
           <ul className="tarantino-details">
             <li>
               <strong>Date of Birth:</strong> March 27, 1963
@@ -40,6 +33,17 @@ const Tarantino = () => {
               Best Original Screenplay
             </li>
           </ul>
+          <h3>Biography</h3>
+          <p>
+            Quentin Tarantino, born on March 27, 1963, is an Oscar-winning
+            filmmaker famous for his distinctive use of violence, profanity, and
+            extended monologues. His films often include pop culture references
+            and feature recurring collaborators like Samuel L. Jackson.
+            Tarantino’s storytelling is known for its nonlinear structure and
+            memorable dialogue, which, combined with his unique approach to
+            filmmaking, has made him one of the most influential directors in
+            modern cinema.
+          </p>
         </div>
       </section>
     </div>

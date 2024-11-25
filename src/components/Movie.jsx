@@ -7,10 +7,12 @@ const Movie = ({ oneMovie }) => {
   return (
     <div className="movie-card">
       {/* Accéder à l'image via le serveur local */}
+
       <img
         src={`http://localhost:5005/images/posters/${oneMovie.poster}`}
         alt={`${oneMovie.title} Poster`}
       />
+
       <div className="movie-infos">
         <Link to={`/MovieDetails/${oneMovie.id}`}>
           <h2>
