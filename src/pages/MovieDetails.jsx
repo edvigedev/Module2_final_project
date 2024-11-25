@@ -20,7 +20,10 @@ const MovieDetails = ({ movies, setMovies }) => {
       <h1>{movieDetail.title}</h1>
       <div>
         <section>
-          <img src={movieDetail.poster} alt={`${movieDetail.title} Poster`} />
+          <img
+            src={`http://localhost:5005/images/posters/${movieDetail.poster}`}
+            alt={`${movieDetail.title} Poster`}
+          />
 
           <div>
             <h3>{movieDetail.year}</h3>
@@ -39,9 +42,9 @@ const MovieDetails = ({ movies, setMovies }) => {
             <div>
               <h2>Featuring</h2>
               <div>
-                {movieDetail.actors.map((actor) => {
-                  <Actor key={actor.id} actor={actor}></Actor>;
-                })}
+                {movieDetail.actors.map((actor) => (
+                  <Actor key={actor.id} actor={actor}></Actor>
+                ))}
               </div>
             </div>
           </div>

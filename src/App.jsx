@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Movie from "./components/Movie";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import RandomCrush from "./pages/RandomCrush";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -36,8 +37,9 @@ function App() {
           element={<MovieDetails movies={movies} setMovies={setMovies} />}
         />
         <Route path="/AboutDirector" element={<AboutDirector />} />
+        <Route path="/RandomCrush" element={<RandomCrush />} />
       </Routes>
-      <Movie></Movie>
+      <Movie> </Movie>
       <Footer />
     </>
   );

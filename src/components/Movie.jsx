@@ -12,7 +12,7 @@ const Movie = ({ oneMovie }) => {
         alt={`${oneMovie.title} Poster`}
       />
       <div className="movie-infos">
-        <Link to="/MovieDetails/:movieId">
+        <Link to={`/MovieDetails/${oneMovie.id}`}>
           <h2>
             {oneMovie.title} ({oneMovie.year})
           </h2>

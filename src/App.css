@@ -8,8 +8,6 @@ h5 {
   padding: 0;
 }
 
-
-
 a {
   text-decoration: none;
   color: inherit;
@@ -53,7 +51,7 @@ nav {
 }
 
 .home-page .crush-description {
-  margin: 0px 400px;
+  margin: 30px 400px;
   text-align: justify;
   color: aliceblue;
   font-size: 16px;
@@ -118,7 +116,7 @@ footer {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Ombres */
   border-radius: 20px;
-  margin: 30px 350px;
+  margin: 40px 350px;
   padding: 15px;
   color: aliceblue;
 }
