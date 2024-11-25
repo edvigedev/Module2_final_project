@@ -13,7 +13,7 @@ const Navbar = () => {
           <img src={NewLogo} alt="Logo" className="panda-navbar" />
         </Link>
         <NavLink to="/AboutDirector">
-          <div className="about-navbar">About</div>
+          <div className="about-navbar">About Directors</div>
         </NavLink>
         <NavLink to="/RandomCrush">
           <div className="crush-navbar">Random Crush</div>

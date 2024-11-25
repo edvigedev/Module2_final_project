@@ -8,6 +8,10 @@ h5 {
   padding: 0;
 }
 
+#root {
+  background: linear-gradient(to bottom, #3470c3, #1d3e85);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -145,4 +149,93 @@ footer {
 .movie-infos h3 {
   text-align: justify;
   font-style: italic;
+}
+
+/* this is the styling of the about Directors page */
+.about-container {
+  height: 80vh;
+  margin: 90px;
+}
+
+.tarantino-container h1 {
+  border: 2px solid aliceblue;
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 20px;
+  margin: 0px 300px;
+  text-align: center;
+}
+
+/* this is the styling of the about tarantino page */
+.tarantino-page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  background: linear-gradient(to bottom, #3470c3, #1d3e85);
+}
+
+.tarantino-header {
+  background-color: rgba(213, 222, 230, 0.831);
+  border-radius: 5px;
+  color: #1d3e85;
+  text-align: center;
+  padding: 5px;
+}
+
+.tarantino-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.tarantino-header p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.tarantino-profile {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  height: 350px;
+}
+
+.tarantino-photo {
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarantino-info {
+  flex: 1;
+}
+
+.tarantino-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tarantino-details {
+  list-style: none;
+  padding: 0;
+}
+
+.tarantino-details li {
+  margin: 0.5rem 0;
+}
+
+.tarantino-films {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.tarantino-films h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.tarantino-films ul {
+  list-style: square;
+  padding-left: 1.5rem;
 }
