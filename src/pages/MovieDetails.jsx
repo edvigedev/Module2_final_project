@@ -32,7 +32,7 @@ const MovieDetails = ({ movies, setMovies }) => {
             <div className="text-quick-info-moviedetail">
               <h3> Year: {movieDetail.year}</h3>
               <h3> Duration: {movieDetail.duration} min.</h3>
-              <h3> "{movieDetail.quote}"</h3>
+              <h3 className="quote-moviedetail"> "{movieDetail.quote}"</h3>
             </div>
           </section>
 
@@ -45,7 +45,7 @@ const MovieDetails = ({ movies, setMovies }) => {
 
               <div>
                 <h2>Featuring</h2>
-                <div>
+                <div className= "actors-moviedetail">
                   {movieDetail.actors.map((actor) => (
                     <Actor key={actor.id} actor={actor}></Actor>
                   ))}

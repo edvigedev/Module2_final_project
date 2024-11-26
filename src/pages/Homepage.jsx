@@ -6,10 +6,12 @@ const Homepage = ({ movies, setMovies }) => {
     <div className="home-page">
       <h1>Movie Crush</h1>
       <p className="crush-description">
-        Your ultimate destination for movies, reviews, and everything cinema.
-        Discover the latest releases, explore hidden gems, and stay up-to-date
-        with all things film. Dive into a world of entertainment, tailored just
-        for you!
+        Welcome, Tarantino fans! <br></br>
+        We are two developers united by our passion for Quentin Tarantino's
+        iconic masterpieces. His films are timeless works of art that never
+        cease to captivate us. <br></br>Here, you'll find everything a true fan
+        needs—insights into his greatest movies and plenty of inspiration for
+        your next cinematic journey. <br></br>
       </p>
 
       <div className="movie-list">
