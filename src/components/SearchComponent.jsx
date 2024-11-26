@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Movie from "./Movie";
 import { Link } from "react-router-dom";
 
-const SearchComponent = ({ movies, setMovies }) => {
+const SearchComponent = ({ movies, setMovies, setIsSearchOpen }) => {
   {
     /*This stores the data the user types */
   }
@@ -38,9 +38,17 @@ const SearchComponent = ({ movies, setMovies }) => {
     });
     setFilteredData(showFilteredMovie);
   };
+  {
+    /* We clear the search bar after the movie is selected */
+  }
+  const clearSearch = () => {
+    setQuery(""); // Clear the input
+    setFilteredData([]); // Clear the filtered results
+    setIsSearchOpen((prev) => !prev);
+  };
 
   return (
-    <div>
+    <div className="typing-area">
       <input
         type="text"
         placeholder="Search..."
@@ -52,12 +60,17 @@ const SearchComponent = ({ movies, setMovies }) => {
           filteredMovie.length > 0
             ? filteredMovie.map((oneMovie) => (
                 <div className="search-title" key={oneMovie.id}>
-                  <Link to={`/MovieDetails/${oneMovie.id}`}>
-                    <ul><li>{oneMovie.title}</li></ul>
+                  <Link
+                    to={`/MovieDetails/${oneMovie.id}`}
+                    onClick={clearSearch}
+                  >
+                    <ul>
+                      <li>{oneMovie.title}</li>
+                    </ul>
                   </Link>
                 </div>
               ))
-            : query && <p>Type to search</p> // Show a message if no results match
+            : query && <p></p> // Show a message if no results match
         }
       </div>
     </div>

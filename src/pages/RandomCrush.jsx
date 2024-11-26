@@ -14,15 +14,15 @@ const RandomCrush = ({ movies }) => {
   return (
     <section className="random-card-container">
       <div className="random-crush">
-        <div className="movie-card">
+        <div className="quick-info-movieDetail">
           {/* Display the movie poster */}
           <img
             src={`http://localhost:5005/images/posters/${randomMovie.poster}`}
             alt={`${randomMovie.title} Poster`}
-            className="movie-poster"
+            className="details-poster"
             onError={(e) => (e.target.src = "/path/to/default-image.jpg")} // Fallback image if the poster is not found
           />
-          <div className="movie-infos">
+          <div className="text-quick-info-moviedetail">
             {/* Display the movie title and year */}
             <Link to={`/MovieDetails/${randomMovie.id}`}>
               <h2>
@@ -30,7 +30,9 @@ const RandomCrush = ({ movies }) => {
               </h2>
             </Link>
             {/* Display the movie's quote, if it exists */}
-            {randomMovie.quote && <h3>"{randomMovie.quote}"</h3>}
+            {randomMovie.quote && (
+              <h3 className="quote-moviedetail">"{randomMovie.quote}"</h3>
+            )}
           </div>
         </div>
       </div>

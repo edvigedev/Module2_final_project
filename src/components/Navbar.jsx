@@ -29,7 +29,11 @@ const Navbar = ({ movies, setMovies }) => {
           </button>
           <div className="search-area">
             {isSearchOpen && (
-              <SearchComponent movies={movies} setMovies={setMovies} />
+              <SearchComponent
+                movies={movies}
+                setMovies={setMovies}
+                setIsSearchOpen={setIsSearchOpen}
+              />
             )}
           </div>
         </div>

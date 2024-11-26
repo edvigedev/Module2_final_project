@@ -42,10 +42,9 @@ const MovieDetails = ({ movies, setMovies }) => {
               <p>{movieDetail.description}</p>
 
               {/* Actors Section */}
-
-              <div>
-                <h2>Featuring</h2>
-                <div className= "actors-moviedetail">
+              <h2>Featuring</h2>
+              <div className="featuring-container">
+                <div className="actors-moviedetail">
                   {movieDetail.actors.map((actor) => (
                     <Actor key={actor.id} actor={actor}></Actor>
                   ))}

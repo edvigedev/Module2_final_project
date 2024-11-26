@@ -1,12 +1,21 @@
+/* *{ 
+position: relative;
+content: "";
+outline: solid 3px red; }
+
+*::after{ position: absolute;
+
+outline: solid 3px red; }
+ */
+
+html,
 body {
-  height: 100%;
-  box-sizing: border-box;
-  font-size: 16px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
+  height: 100%; /* Prend toute la hauteur de l'écran */
+  margin: 0; /* Évite tout décalage dû aux marges */
+  background: linear-gradient(to bottom, #3470c3, #1d3e85);
 }
+
+
 h1,
 h2,
 h3,
@@ -106,11 +115,33 @@ footer {
   opacity: 100%;
 }
 
+/* Search Box Container */
+
 .search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
   display: flex;
+  box-sizing: border-box;
+}
+
+.search-title ul {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.search-title li {
+  color: aliceblue;
+  list-style: none;
+  line-height: 1;
+}
+
+.search-area {
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: aliceblue;
+  position: absolute;
 }
 
 .btn-search {
@@ -125,6 +156,11 @@ footer {
   color: aliceblue;
   background-color: transparent;
   pointer-events: painted;
+  margin-right: 100px;
+}
+
+.typing-area input {
+  margin-left: 40px;
 }
 
 .movie-list {
@@ -235,21 +271,22 @@ footer {
 
 .quick-info-movieDetail {
   background-color: #4d7ec4;
+  color: aliceblue;
   display: flex;
   margin: 3%;
   gap: 30px;
-
-  max-width: 1000px;
+  width: 800px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
     0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
   border-radius: 10px;
   padding: 40px;
+  font-family: "Rockwell", "Clarendon", serif;
 }
 
 .details-poster {
-  height: 30%;
+  height: 400px;
   width: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -265,7 +302,6 @@ footer {
   color: #fff;
   font-size: 1.3rem;
   margin-bottom: 10px;
-  font-family: "Rockwell", "Clarendon", serif;
 }
 
 .quote-moviedetail {
@@ -303,14 +339,38 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1rem;
   gap: 15%;
   padding: 20px, 0;
 }
 .actors-moviedetail p {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   gap: 15%;
   padding: 20px, 0;
+}
+
+.actor-image {
+  height: 150px;
+  width: 110px;
+  border-radius: 30%;
+  box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08);
+}
+
+.actor-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.featuring-container {
+  display: flex;
+}
+
+.actors-moviedetail {
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /* this is the styling of the about Directors page */
@@ -395,30 +455,12 @@ footer {
 
 /* This is the styling of the random crush page */
 .random-card-container {
-  min-height: 555px;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.actor-image {
-  height: 250px;
-  width: 180px;
-  border-radius: 10px;
-  box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08);
-}
-
-.search-title ul {
-  margin: 0;
-  padding: 0;
-}
-
-.search-title li {
-  color: aliceblue;
-  list-style: none;
-}
-
-.search-area {
-  padding: 10px;
-  color: aliceblue;
+.random-crush {
+  margin-top: 10%;
 }
