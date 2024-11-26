@@ -71,11 +71,11 @@ nav {
 
 .home-page .crush-description {
   margin: 50px 400px;
-  text-align: justify;
+  text-align: center;
   color: aliceblue;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 300;
-  line-height: 25px;
+  line-height: 20px;
   font-family: "Rockwell", "Clarendon", serif;
 }
 
@@ -238,7 +238,7 @@ footer {
   display: flex;
   margin: 5%;
   width: 63%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
     0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
@@ -256,7 +256,7 @@ footer {
 .text-quick-info-moviedetail {
   line-height: 3;
   text-align: left;
-  margin: 0 10px;
+  margin: 30px, 30px;
 }
 
 .text-quick-info-moviedetail h3 {

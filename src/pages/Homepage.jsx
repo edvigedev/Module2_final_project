@@ -8,8 +8,7 @@ const Homepage = ({ movies, setMovies }) => {
       <p className="crush-description">
         Welcome, Tarantino fans! <br></br>
         We are two developers united by our passion for Quentin Tarantino's
-        iconic masterpieces. His films are timeless works of art that never
-        cease to captivate us. <br></br>Here, you'll find everything a true fan
+        iconic masterpieces. Here, you'll find everything a true fan
         needs—insights into his greatest movies and plenty of inspiration for
         your next cinematic journey. <br></br>
       </p>
