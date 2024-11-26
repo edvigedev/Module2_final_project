@@ -27,7 +27,7 @@ function App() {
   }, []);
   return (
     <>
-      <Navbar />
+      <Navbar movies={movies} setMovies={setMovies} />
       <Routes>
         <Route
           path="/"

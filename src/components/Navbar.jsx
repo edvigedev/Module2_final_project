@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import NewLogo from "../assets/NewLogo.png";
 import search from "../assets/search.png";
 import { Link, NavLink } from "react-router-dom";
+import SearchComponent from "./SearchComponent";
 
-const Navbar = () => {
+const Navbar = ({ movies, setMovies }) => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
     <>
       <nav className="navbar">
@@ -19,9 +21,17 @@ const Navbar = () => {
           <div className="crush-navbar">Random Crush</div>
         </NavLink>
         <div className="search-box">
-          <button className="btn-search">
+          <button
+            className="btn-search"
+            onClick={() => setIsSearchOpen((prev) => !prev)}
+          >
             <img src={search} alt="Button Icon" style={{ height: "35px" }} />
           </button>
+          <div className="search-area">
+            {isSearchOpen && (
+              <SearchComponent movies={movies} setMovies={setMovies} />
+            )}
+          </div>
         </div>
       </nav>
     </>

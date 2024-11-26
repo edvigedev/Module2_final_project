@@ -5,6 +5,7 @@ const Actor = ({ actor }) => {
     <div>
       <h4>{actor.name}</h4>
       <p> Role: {actor.role}</p>
+      <img src={actor.picture} alt={actor.picture} className="actor-image"/>
     </div>
   );
 };

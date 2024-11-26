@@ -43,7 +43,6 @@ nav {
 
 .active {
   border-bottom: 2px solid aliceblue; /* Or any other style you want */
-  color: aliceblue; /* Optional: Change the text color when active */
   font-weight: 700; /* Optional: Make the active link bold */
 }
 
@@ -153,6 +152,7 @@ footer {
 }
 .movie-card:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 10px 2px red; /* Red shadow effect around the card */
 }
 
 .movie-card img {
@@ -236,8 +236,10 @@ footer {
 .quick-info-movieDetail {
   background-color: #4d7ec4;
   display: flex;
-  margin: 5%;
-  width: 63%;
+  margin: 3%;
+  gap: 30px;
+
+  max-width: 1000px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
@@ -344,6 +346,8 @@ footer {
   text-align: center;
   padding: 5px;
   margin: 0px 450px;
+  min-width: 600px;
+  max-width: 700px;
 }
 
 .tarantino-header h1 {
@@ -395,4 +399,26 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.actor-image {
+  height: 250px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08);
+}
+
+.search-title ul {
+  margin: 0;
+  padding: 0;
+}
+
+.search-title li {
+  color: aliceblue;
+  list-style: none;
+}
+
+.search-area {
+  padding: 10px;
+  color: aliceblue;
 }
