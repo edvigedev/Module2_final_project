@@ -76,7 +76,7 @@ function App() {
           />
           <Route
             path="/ActorsDetails/:actorId"
-            element={<ActorsDetails movies={movies} />}
+            element={<ActorsDetails movies={movies} darkTheme={darkTheme} />}
           ></Route>
         </Routes>
 

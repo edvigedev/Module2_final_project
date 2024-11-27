@@ -27,6 +27,7 @@ h5 {
 
 .dark {
   background-image: url("../src/assets/background.jpg");
+  background-size: cover;
 }
 
 #root {
@@ -86,9 +87,9 @@ nav {
   margin: 50px 400px;
   text-align: center;
   color: aliceblue;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: 300;
-  line-height: 20px;
+  line-height: 30px;
   font-family: "Rockwell", "Clarendon", serif;
 }
 
@@ -273,6 +274,10 @@ footer {
   width: 50%;
 }
 
+.movie-infos h2 {
+  max-width: 400px;
+}
+
 .movie-infos a {
   position: absolute;
   margin-bottom: 250px;
@@ -295,6 +300,11 @@ footer {
 
 .movie-details {
   background: linear-gradient(to bottom, #3470c3, #1d3e85);
+  min-height: 2800px;
+  color: aliceblue;
+}
+
+.movie-details-dark-theme {
   min-height: 2800px;
   color: aliceblue;
 }
@@ -452,6 +462,21 @@ footer {
   padding: 40px;
   font-family: "Rockwell", "Clarendon", serif;
 }
+.quick-info-actorDetail-dark-theme {
+  background-color: #0a1128;
+  color: aliceblue;
+  display: flex;
+  margin: 3%;
+  gap: 30px;
+  width: 800px;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
+    0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
+  border-radius: 10px;
+  padding: 40px;
+  font-family: "Rockwell", "Clarendon", serif;
+}
 
 .description-actordetail {
   display: flex;
@@ -499,6 +524,7 @@ footer {
 /* this is the styling of the about tarantino page */
 .tarantino-page {
   line-height: 1.6;
+  height: 100vh;
   margin: 0;
   padding: 0;
   color: aliceblue;
@@ -508,9 +534,9 @@ footer {
 
 .tarantino-header {
   /* background-color: #4d7ec4; */
-  box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
-  border-radius: 10px;
-  color: #f3f5f8;
+  /* box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
+  /*border-radius: 10px;
+  color: #f3f5f8; */
   text-align: center;
   padding: 5px;
   margin: 0px 450px;
@@ -520,19 +546,21 @@ footer {
 
 .tarantino-header h1 {
   margin-bottom: 5%;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "Unlock";
 }
 
 .tarantino-header p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 0.5rem;
+  font-family: "Rockwell", "Clarendon", serif;
+  font-weight: bold;
 }
 
 .tarantino-header-dark-theme {
-  background-color: #0a1128;
+  /* background-color: #0a1128;
   box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
-  border-radius: 10px;
+  /*border-radius: 10px; */
   color: #f3f5f8;
   text-align: center;
   padding: 5px;
@@ -543,34 +571,45 @@ footer {
 
 .tarantino-header-dark-theme h1 {
   margin-bottom: 5%;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "Unlock";
 }
 
 .tarantino-header-dark-theme p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 0.5rem;
+  font-family: "Rockwell", "Clarendon", serif;
+  font-weight: bold;
 }
 
 .tarantino-profile {
+  /* display: flex;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  height: 350px; */
   display: flex;
   gap: 2rem;
   padding: 2rem 4rem;
-  height: 350px;
+  height: auto; /* Allow content to determine height */
+  align-items: flex-start; /* Align text to the top */
 }
 
 .tarantino-photo {
   height: 350px;
+  margin-left: 4%;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tarantino-info {
-  flex: 1;
+  flex: 1.5;
+
+  font-family: "Rockwell", "Clarendon", serif;
 }
 
-.tarantino-info h2 {
-  font-size: 2.5rem;
+.tarantino-info h3 {
+  font-size: 2rem;
+  margin-top: 10%;
   margin-bottom: 1rem;
 }
 
@@ -578,10 +617,14 @@ footer {
   list-style: none;
   padding: 0;
   margin-bottom: 40px;
+  font-size: 1.2em;
 }
 
 .tarantino-info p {
-  font-size: 18px;
+  text-align: left;
+  line-height: 1.8; /* Improve readability */
+  word-wrap: break-word; /* Ensure words don't overflow */
+  width: 80%;
 }
 
 /* This is the styling of the random crush page */
@@ -594,4 +637,21 @@ footer {
 
 .random-crush {
   margin-top: 10%;
+}
+
+.tarantino-agrees {
+  max-width: 60%;
+  gap: 20%;
+  color: #fff;
+  line-height: 1.8;
+  text-align: justify;
+  font-family: "Rockwell", "Clarendon", serif;
+}
+
+.tarantino-agrees h3 {
+  font-size: 2em;
+}
+
+.tarantino-agrees p {
+  font-style: italic;
 }

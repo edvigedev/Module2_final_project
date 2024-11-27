@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const ActorsDetails = ({ movies }) => {
+const ActorsDetails = ({ movies, darkTheme }) => {
   const { actorId } = useParams();
   //combining all the actors into one array
 
@@ -19,10 +19,10 @@ const ActorsDetails = ({ movies }) => {
 
   return (
     <div>
-      <div className="movie-details">
+      <div className={darkTheme ? "movie-details-dark-theme" : "movie-details"}>
         <h1 className="h1-movieDetail">{actorDetail.name}</h1>
         <div className="info-movieDetail">
-          <section className="quick-info-actorDetail">
+          <section className={darkTheme ? "quick-info-actorDetail-dark-theme" : "quick-info-actorDetail"}>
             <div>
               <img
                 className="details-poster"
