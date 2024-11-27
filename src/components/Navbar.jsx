@@ -14,11 +14,11 @@ const Navbar = ({ movies, setMovies }) => {
           {" "}
           <img src={NewLogo} alt="Logo" className="panda-navbar" />
         </Link>
-        <NavLink to="/AboutDirector">
-          <div className="about-navbar">About Directors</div>
+        <NavLink to="/Tarantino">
+          <div className="about-navbar">Tarantino</div>
         </NavLink>
         <NavLink to="/RandomCrush">
-          <div className="crush-navbar">Random Crush</div>
+          <div className="crush-navbar">Random Movie Crush</div>
         </NavLink>
         <div className="search-box">
           <button

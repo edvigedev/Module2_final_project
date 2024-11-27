@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import RandomCrush from "./pages/RandomCrush";
 import Tarantino from "./pages/Tarantino";
+import ActorsDetails from "./pages/ActorsDetails";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -42,6 +43,10 @@ function App() {
         <Route
           path="/RandomCrush"
           element={<RandomCrush movies={movies} setMovies={setMovies} />}
+        />
+        <Route
+          path="/ActorsDetails/:actorId"
+          element={<ActorsDetails movies={movies} />}
         />
       </Routes>
       <Movie> </Movie>

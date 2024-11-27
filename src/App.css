@@ -15,7 +15,6 @@ body {
   background: linear-gradient(to bottom, #3470c3, #1d3e85);
 }
 
-
 h1,
 h2,
 h3,
@@ -311,7 +310,8 @@ footer {
 
 .description-moviedetail {
   max-width: 60%;
-  margin: auto;
+  margin: 7%;
+  gap: 20%;
   color: #fff;
   line-height: 1.8;
   text-align: justify;
@@ -371,6 +371,52 @@ footer {
 .actors-moviedetail {
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+/*Actors details page*/
+
+.quick-info-actorDetail {
+  background-color: #4d7ec4;
+  color: aliceblue;
+  display: flex;
+  margin: 3%;
+  gap: 30px;
+  width: 800px;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
+    0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
+  border-radius: 10px;
+  padding: 40px;
+  font-family: "Rockwell", "Clarendon", serif;
+}
+
+.description-actordetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10%;
+  margin: auto;
+  color: #fff;
+  line-height: 1.8;
+  text-align: left;
+  font-family: "Rockwell", "Clarendon", serif;
+}
+
+.description-actordetail h2 {
+  font-size: 2em;
+}
+
+.description-actordetail li {
+  margin-top: 8px;
+  font-weight: 200;
+  font-size: 1.2em;
+}
+
+.description-actordetail h3 {
+  margin-top: 15px;
+  font-weight: 200;
+  font-size: 1.2em;
 }
 
 /* this is the styling of the about Directors page */
