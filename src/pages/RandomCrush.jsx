@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const RandomCrush = ({ movies }) => {
+const RandomCrush = ({ movies, darkTheme, setDarkTheme }) => {
   // Check if the movies array is valid
   if (!movies || movies.length === 0) {
     return <div>No movies available</div>; // Handle the case where there are no movies
@@ -14,7 +14,13 @@ const RandomCrush = ({ movies }) => {
   return (
     <section className="random-card-container">
       <div className="random-crush">
-        <div className="quick-info-movieDetail">
+        <div
+          className={
+            darkTheme
+              ? "quick-info-movieDetail-dark-theme"
+              : "quick-info-movieDetail"
+          }
+        >
           {/* Display the movie poster */}
           <img
             src={`http://localhost:5005/images/posters/${randomMovie.poster}`}
