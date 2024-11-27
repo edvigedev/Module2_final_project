@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Actor from "../components/Actor";
 
-const MovieDetails = ({ movies, setMovies }) => {
+const MovieDetails = ({ movies, setMovies, darkTheme }) => {
   const { movieId } = useParams();
 
   const movieDetail = movies.find((movie) => String(movie.id) === movieId);
@@ -17,10 +17,16 @@ const MovieDetails = ({ movies, setMovies }) => {
 
   return (
     <>
-      <div className="movie-details">
+      <div className={darkTheme ? "movie-details-dark-theme" : "movie-details"}>
         <h1 className="h1-movieDetail">{movieDetail.title}</h1>
         <div className="info-movieDetail">
-          <section className="quick-info-movieDetail">
+          <section
+            className={
+              darkTheme
+                ? "quick-info-movieDetail-dark-theme"
+                : "quick-info-movieDetail"
+            }
+          >
             <div>
               <img
                 className="details-poster"

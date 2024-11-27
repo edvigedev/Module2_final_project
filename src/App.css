@@ -12,9 +12,9 @@ html,
 body {
   height: 100%; /* Prend toute la hauteur de l'écran */
   margin: 0; /* Évite tout décalage dû aux marges */
-  background: linear-gradient(to bottom, #3470c3, #1d3e85);
+  /* background: linear-gradient(to bottom, #3470c3, #1d3e85); */
+  background-color: rgba(255, 0, 0, 0.795);
 }
-
 
 h1,
 h2,
@@ -25,8 +25,13 @@ h5 {
   padding: 0;
 }
 
+.dark {
+  background-image: url("../src/assets/background.jpg");
+}
+
 #root {
   background: linear-gradient(to bottom, #3470c3, #1d3e85);
+  /* background-image: url("../src/assets/background.jpg"); */
 }
 
 a {
@@ -41,7 +46,7 @@ a {
 }
 
 nav {
-  background-color: #3470c3;
+  /* background-color: #3470c3; */
   height: 10vh;
   display: flex;
   justify-content: space-around;
@@ -60,11 +65,11 @@ nav {
 }
 
 .home-page {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     #3470c3,
     #1d3e85
-  ); /* From blue to dark blue */
+  ); From blue to dark blue */
   min-height: 100vh;
 }
 
@@ -91,7 +96,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #3470c3;
+  /* background-color: #3470c3; */
   color: aliceblue;
   height: 5vh;
   opacity: 85%;
@@ -186,6 +191,7 @@ footer {
   height: 300px;
   width: 750px;
 }
+
 .movie-card:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
   box-shadow: 0 0 10px 2px red; /* Red shadow effect around the card */
@@ -211,6 +217,49 @@ footer {
 }
 
 .movie-card h3 {
+  font-family: "Rockwell", "Clarendon", serif;
+  font-weight: 200;
+}
+
+.movie-card-dark-theme {
+  background-color: #0a1128;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  color: aliceblue;
+  height: 300px;
+  width: 750px;
+}
+
+.movie-card-dark-theme:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 10px 2px red; /* Red shadow effect around the card */
+}
+
+.movie-card-dark-theme img {
+  height: 280px;
+  width: 200px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.movie-card-dark-theme h2 {
+  font-size: 1.2em;
+  text-align: center;
+  position: absolute;
+  margin: 20px, 10px;
+  max-height: 2.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Unlock;
+}
+
+.movie-card-dark-theme h3 {
   font-family: "Rockwell", "Clarendon", serif;
   font-weight: 200;
 }
@@ -245,11 +294,7 @@ footer {
 /*Movie details start*/
 
 .movie-details {
-  background: linear-gradient(
-    to bottom,
-    #3470c3,
-    #1d3e85
-  ); /* From blue to dark blue */
+  background: linear-gradient(to bottom, #3470c3, #1d3e85);
   min-height: 2800px;
   color: aliceblue;
 }
@@ -271,6 +316,22 @@ footer {
 
 .quick-info-movieDetail {
   background-color: #4d7ec4;
+  color: aliceblue;
+  display: flex;
+  margin: 3%;
+  gap: 30px;
+  width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
+    0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
+  border-radius: 10px;
+  padding: 40px;
+  font-family: "Rockwell", "Clarendon", serif;
+}
+
+.quick-info-movieDetail-dark-theme {
+  background-color: #0a1128;
   color: aliceblue;
   display: flex;
   margin: 3%;
@@ -394,12 +455,12 @@ footer {
   margin: 0;
   padding: 0;
   color: aliceblue;
-  background: linear-gradient(to bottom, #3470c3, #1d3e85);
+  /* background: linear-gradient(to bottom, #3470c3, #1d3e85); */
   height: 100vh;
 }
 
 .tarantino-header {
-  background-color: #4d7ec4;
+  /* background-color: #4d7ec4; */
   box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
   border-radius: 10px;
   color: #f3f5f8;
@@ -417,6 +478,29 @@ footer {
 }
 
 .tarantino-header p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.tarantino-header-dark-theme {
+  background-color: #0a1128;
+  box-shadow: 0 10px 12px rgba(9, 9, 9, 0.1), 0 5px 8px rgba(5, 5, 5, 0.08); /* Ombres */
+  border-radius: 10px;
+  color: #f3f5f8;
+  text-align: center;
+  padding: 5px;
+  margin: 0px 450px;
+  min-width: 600px;
+  max-width: 700px;
+}
+
+.tarantino-header-dark-theme h1 {
+  margin-bottom: 5%;
+  font-size: 2.5rem;
+  font-family: "Unlock";
+}
+
+.tarantino-header-dark-theme p {
   font-size: 1rem;
   margin-top: 0.5rem;
 }

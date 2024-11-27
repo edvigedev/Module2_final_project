@@ -1,7 +1,7 @@
 import React from "react";
 import Movie from "../components/Movie";
 
-const Homepage = ({ movies, setMovies }) => {
+const Homepage = ({ movies, setMovies, darkTheme, setDarkTheme }) => {
   return (
     <div className="home-page">
       <h1>Movie Crush</h1>
@@ -17,7 +17,12 @@ const Homepage = ({ movies, setMovies }) => {
         {movies.map((oneMovie) => {
           return (
             <div key={oneMovie.id}>
-              <Movie oneMovie={oneMovie} setMovies={setMovies} />
+              <Movie
+                oneMovie={oneMovie}
+                setMovies={setMovies}
+                darkTheme={darkTheme}
+                setDarkTheme={setDarkTheme}
+              />
             </div>
           );
         })}

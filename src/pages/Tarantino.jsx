@@ -1,9 +1,13 @@
 import React from "react";
 
-const Tarantino = () => {
+const Tarantino = ({ darkTheme }) => {
   return (
     <div className="tarantino-page">
-      <header className="tarantino-header">
+      <header
+        className={
+          darkTheme ? "tarantino-header-dark-theme" : "tarantino-header"
+        }
+      >
         <h1>Quentin Tarantino</h1>
         <p>CANNES, FRANCE - MAY 27, 2023</p>
       </header>

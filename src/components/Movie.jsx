@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Movie = ({ oneMovie }) => {
+const Movie = ({ oneMovie, darkTheme, setDarkTheme }) => {
   if (!oneMovie) return null; // Fallback for undefined data
 
   return (
-    <div className="movie-card">
+    <div className={darkTheme ? "movie-card-dark-theme" : "movie-card"}>
       {/* Accéder à l'image via le serveur local */}
 
       <img
