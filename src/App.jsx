@@ -11,6 +11,7 @@ import axios from "axios";
 import RandomCrush from "./pages/RandomCrush";
 import Tarantino from "./pages/Tarantino";
 import { ThemeContext } from "./contexts/ThemeContext";
+import ActorsDetails from "./pages/ActorsDetails";
 
 function App() {
   const { darkTheme, setDarkTheme } = useContext(ThemeContext);
@@ -73,6 +74,10 @@ function App() {
               />
             }
           />
+          <Route
+            path="/ActorsDetails/:actorId"
+            element={<ActorsDetails movies={movies} />}
+          ></Route>
         </Routes>
 
         <Footer />
