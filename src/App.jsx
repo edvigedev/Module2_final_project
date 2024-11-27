@@ -10,7 +10,6 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import RandomCrush from "./pages/RandomCrush";
 import Tarantino from "./pages/Tarantino";
-import ActorsDetails from "./pages/ActorsDetails";
 import { ThemeContext } from "./contexts/ThemeContext";
 
 function App() {
@@ -37,9 +36,7 @@ function App() {
           darkTheme={darkTheme}
           setDarkTheme={setDarkTheme}
         />
-
         <Routes>
-        
           <Route
             path="/"
             element={
@@ -74,16 +71,9 @@ function App() {
                 setMovies={setMovies}
                 darkTheme={darkTheme}
               />
-              
             }
           />
-            <Route
-          path="/ActorsDetails/:actorId"
-          element={<ActorsDetails movies={movies} />}
-        />
-          
         </Routes>
-         <Movie> </Movie>
 
         <Footer />
       </main>
