@@ -20,9 +20,7 @@ const MovieDetails = ({ movies, setMovies, darkTheme }) => {
       // If the movie is not in the frontend state, fetch it from the backend
       const fetchMovie = async () => {
         try {
-          const response = await axios.get(
-            `${API_URL}/movies/${movieId}`
-          ); // GET request to fetch movie details
+          const response = await axios.get(`${API_URL}/movies/${movieId}`); // GET request to fetch movie details
           setMovieDetail(response.data); // Set the fetched movie details to state
         } catch (error) {
           console.error("Error fetching movie details:", error); // Log any errors during the fetch
@@ -60,7 +58,8 @@ const MovieDetails = ({ movies, setMovies, darkTheme }) => {
             <div>
               <img
                 className="details-poster"
-                src={`${API_URL}/images/posters/${movieDetail.poster}`}
+                src={movieDetail.poster}
+                // src={`${API_URL}/images/posters/${movieDetail.poster}`}
                 alt={`${movieDetail.title} Poster`}
               />
             </div>
