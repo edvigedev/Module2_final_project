@@ -27,7 +27,7 @@ const Tarantino = ({ darkTheme }) => {
               <strong>Place of Birth:</strong> Knoxville, Tennessee
             </li>
             <li>
-              <strong>Occupation:</strong> Director
+              <strong>Occupation:</strong> Director, Actor
             </li>
             {/* <li>
               <strong>Notable Work:</strong> Pulp Fiction, Reservoir Dogs, Kill
