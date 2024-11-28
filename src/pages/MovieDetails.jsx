@@ -1,20 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 import Actor from "../components/Actor";
 
 const MovieDetails = ({ movies, setMovies, darkTheme }) => {
-  const { movieId } = useParams();
+  const { movieId } = useParams(); // Extract the `movieId` from the URL
+  const [movieDetail, setMovieDetail] = useState(null); // State to hold the details of the movie
+  const [loading, setLoading] = useState(true); // State to manage the loading state
 
-  const movieDetail = movies.find((movie) => String(movie.id) === movieId);
+  useEffect(() => {
+    // Check if the movie exists in the passed `movies` array (frontend state)
+    const existingMovie = movies.find((movie) => String(movie.id) === movieId);
+    if (existingMovie) {
+      // If the movie exists, set it directly to `movieDetail` state
+      setMovieDetail(existingMovie);
+      setLoading(false); // Stop loading since we found the movie
+    } else {
+      // If the movie is not in the frontend state, fetch it from the backend
+      const fetchMovie = async () => {
+        try {
+          const response = await axios.get(
+            `http://localhost:5005/movies/${movieId}`
+          ); // GET request to fetch movie details
+          setMovieDetail(response.data); // Set the fetched movie details to state
+        } catch (error) {
+          console.error("Error fetching movie details:", error); // Log any errors during the fetch
+        } finally {
+          setLoading(false); // Stop the loading state regardless of success or failure
+        }
+      };
+      fetchMovie(); // Call the fetch function
+    }
+  }, [movieId, movies]); // Dependency array to trigger effect when `movieId` or `movies` changes
 
+  // Display a loading message while the data is being fetched or processed
+  if (loading) return <p>Loading...</p>;
+
+  // If the movie is not found (e.g., invalid ID or fetch failure), display an error message
   if (!movieDetail) {
     return (
       <div>
-        <h2> Movie not found </h2>
+        <h2>Movie not found</h2>
       </div>
     );
   }
-
   return (
     <>
       <div className={darkTheme ? "movie-details-dark-theme" : "movie-details"}>
@@ -23,7 +52,7 @@ const MovieDetails = ({ movies, setMovies, darkTheme }) => {
           <section
             className={
               darkTheme
-                ? "quick-info-movieDetail-dark-theme"
+                ? "quick-info-movieDetail-dark"
                 : "quick-info-movieDetail"
             }
           >

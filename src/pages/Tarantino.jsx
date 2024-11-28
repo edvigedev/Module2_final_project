@@ -38,7 +38,7 @@ const Tarantino = ({ darkTheme }) => {
               Best Original Screenplay
             </li>
           </ul>
-          <div>
+          
             <RandomQuote />
             <h3>Biography</h3>
             <p>
@@ -76,7 +76,7 @@ const Tarantino = ({ darkTheme }) => {
               storyteller whose work will continue to be celebrated long after
               the credits roll.
             </p>
-          </div>
+          
         </div>
       </section>
     </div>

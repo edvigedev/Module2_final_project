@@ -22,6 +22,7 @@ const Homepage = ({ movies, setMovies, darkTheme, setDarkTheme }) => {
                 setMovies={setMovies}
                 darkTheme={darkTheme}
                 setDarkTheme={setDarkTheme}
+                showButtons={oneMovie.id > 9} // condition to let the existing data clean
               />
             </div>
           );

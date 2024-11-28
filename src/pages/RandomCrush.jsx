@@ -16,9 +16,7 @@ const RandomCrush = ({ movies, darkTheme, setDarkTheme }) => {
       <div className="random-crush">
         <div
           className={
-            darkTheme
-              ? "quick-info-movieDetail-dark-theme"
-              : "quick-info-movieDetail"
+            darkTheme ? "quick-info-movieDetail-dark" : "quick-info-movieDetail"
           }
         >
           {/* Display the movie poster */}

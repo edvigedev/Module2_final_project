@@ -87,7 +87,14 @@ const Navbar = ({ movies, setMovies, darkTheme, setDarkTheme }) => {
         <div className="about-navbar">Tarantino</div>
       </NavLink>
       <NavLink to="/RandomCrush">
-        <div className="crush-navbar">Random Movie Crush</div>
+        <div className="crush-navbar">Random Movie</div>
+      </NavLink>
+
+      <NavLink to="/new-movie">
+        {" "}
+        <div className="add-Movie-navbar">
+          The 10th Movie
+        </div>
       </NavLink>
 
       {/* Search box */}

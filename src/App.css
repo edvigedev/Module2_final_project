@@ -120,6 +120,14 @@ footer {
   font-weight: 300;
   opacity: 100%;
 }
+.add-Movie-navbar {
+  padding: 10px;
+  color: aliceblue;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  opacity: 100%;
+}
 
 /* Search Box Container */
 
@@ -304,10 +312,11 @@ footer {
   color: aliceblue;
 }
 
-.movie-details-dark-theme {
-  min-height: 2800px;
-  color: aliceblue;
+.movie-details-dark {
+  background-image: url("../src/assets/background.jpg");
+  background-size: cover;
 }
+
 .h1-movieDetail {
   font-size: 50px;
   text-align: center;
@@ -325,33 +334,24 @@ footer {
 }
 
 .quick-info-movieDetail {
-  background-color: #4d7ec4;
   color: aliceblue;
   display: flex;
-  margin: 3%;
   gap: 30px;
   width: 800px;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
-    0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
-  border-radius: 10px;
   padding: 40px;
   font-family: "Rockwell", "Clarendon", serif;
 }
 
-.quick-info-movieDetail-dark-theme {
+.quick-info-movieDetail-dark {
   background-color: #0a1128;
   color: aliceblue;
   display: flex;
-  margin: 3%;
   gap: 30px;
   width: 800px;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 12px rgba(7, 7, 7, 0.1),
-    0 5px 8px rgba(250, 249, 249, 0.08); /* Ombres */
-  border-radius: 10px;
   padding: 40px;
   font-family: "Rockwell", "Clarendon", serif;
 }
@@ -524,12 +524,10 @@ footer {
 /* this is the styling of the about tarantino page */
 .tarantino-page {
   line-height: 1.6;
-  height: 100vh;
   margin: 0;
   padding: 0;
   color: aliceblue;
   /* background: linear-gradient(to bottom, #3470c3, #1d3e85); */
-  height: 100vh;
 }
 
 .tarantino-header {
@@ -590,7 +588,7 @@ footer {
   display: flex;
   gap: 2rem;
   padding: 2rem 4rem;
-  height: auto; /* Allow content to determine height */
+  /* Allow content to determine height */
   align-items: flex-start; /* Align text to the top */
 }
 
@@ -602,8 +600,6 @@ footer {
 }
 
 .tarantino-info {
-  flex: 1.5;
-
   font-family: "Rockwell", "Clarendon", serif;
 }
 
@@ -622,8 +618,6 @@ footer {
 
 .tarantino-info p {
   text-align: left;
-  line-height: 1.8; /* Improve readability */
-  word-wrap: break-word; /* Ensure words don't overflow */
   width: 80%;
 }
 
@@ -655,3 +649,110 @@ footer {
 .tarantino-agrees p {
   font-style: italic;
 }
+
+.form-group label {
+  margin: 10px 20px 0px 0px;
+}
+
+.form-group input {
+  margin: 10px 0px;
+}
+
+.form-group button {
+  /* Positioning */
+  margin: 30px auto; /* Center horizontally */
+  display: block; /* Make the button a block element to center it */
+
+  /* Dimensions */
+  width: 150px; /* Fixed width for consistency */
+  padding: 12px 20px; /* Comfortable padding */
+
+  /* Styling */
+  background-color: #007bff; /* Primary blue color */
+  color: #fff; /* White text for contrast */
+  font-size: 18px; /* Readable font size */
+  font-weight: bold; /* Emphasize the button text */
+  text-align: center; /* Center the text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Smooth rounded corners */
+
+  /* Interaction */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth animation for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.form-group button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.button-wrapper {
+  display: flex; /* Arrange buttons in a row */
+  flex-direction: row; /* Ensure buttons are aligned horizontally */
+  justify-content: center; /* Center the buttons */
+  align-items: center; /* Align buttons vertically */
+  gap: 10px; /* Add spacing between buttons */
+
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  /* position: relative; No external positioning affects layout */
+  /* Ensure the wrapper takes up full width */
+}
+
+.edit-button,
+.delete-button {
+  flex: none; /* Prevent buttons from resizing */
+  padding: 10px 20px; /* Add padding for a consistent size */
+
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  font-weight: bold; /* Emphasize button text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add a hover effect */
+}
+
+.edit-button {
+  background-color: #007bff; /* Edit button color */
+}
+
+.delete-button {
+  background-color: rgba(255, 0, 0, 0.795); /* Delete button color */
+}
+
+/* Styling for the edit button */
+/* .edit-button {
+  width: auto;
+
+  background-color: rgba(0, 0, 255, 0.204);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10%;
+} */
+
+/* Styling for the delete button */
+
+/* .delete-button {
+  width: auto;
+
+  background-color: rgba(255, 0, 0, 0.257);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10%;
+} */

@@ -12,6 +12,8 @@ import RandomCrush from "./pages/RandomCrush";
 import Tarantino from "./pages/Tarantino";
 import { ThemeContext } from "./contexts/ThemeContext";
 import ActorsDetails from "./pages/ActorsDetails";
+import NewMovie from "./components/NewMovie";
+import EditMovie from "./components/EditMovie";
 
 function App() {
   const { darkTheme, setDarkTheme } = useContext(ThemeContext);
@@ -78,6 +80,16 @@ function App() {
             path="/ActorsDetails/:actorId"
             element={<ActorsDetails movies={movies} darkTheme={darkTheme} />}
           ></Route>
+
+          <Route
+            path="/new-movie"
+            element={<NewMovie setMovies={setMovies} />}
+          />
+
+          <Route
+            path="/edit-movie/:movieId"
+            element={<EditMovie movies={movies} setMovies={setMovies} />}
+          />
         </Routes>
 
         <Footer />

@@ -3,26 +3,37 @@ import { useParams } from "react-router-dom";
 
 const ActorsDetails = ({ movies, darkTheme }) => {
   const { actorId } = useParams();
-  //combining all the actors into one array
 
+  // Combine all the actors into one array
   const allActors = movies.flatMap((movie) => movie.actors);
 
-  //find the actor by actorID
-
+  // Find the actor by actor ID
   const actorDetail = allActors.find((actor) => String(actor.id) === actorId);
 
-  //if actorId does not match
-
+  // If actorId does not match, display fallback message
   if (!actorDetail) {
     return <div>Actor not found</div>;
   }
+
+  // Ensure `occupation` is always treated as an array
+  const occupations = Array.isArray(actorDetail.occupation)
+    ? actorDetail.occupation
+    : actorDetail.occupation
+    ? actorDetail.occupation.split(",").map((job) => job.trim())
+    : [];
 
   return (
     <div>
       <div className={darkTheme ? "movie-details-dark-theme" : "movie-details"}>
         <h1 className="h1-movieDetail">{actorDetail.name}</h1>
         <div className="info-movieDetail">
-          <section className={darkTheme ? "quick-info-actorDetail-dark-theme" : "quick-info-actorDetail"}>
+          <section
+            className={
+              darkTheme
+                ? "quick-info-actorDetail-dark-theme"
+                : "quick-info-actorDetail"
+            }
+          >
             <div>
               <img
                 className="details-poster"
@@ -44,7 +55,8 @@ const ActorsDetails = ({ movies, darkTheme }) => {
           <div className="occupation-actorDetail">
             <h2>Occupations</h2>
             <ul>
-              {actorDetail.occupation.map((job, index) => (
+              {/* Use the prepared `occupations` array here */}
+              {occupations.map((job, index) => (
                 <li key={index}>
                   {job.charAt(0).toUpperCase() + job.slice(1).replace(/_/, " ")}
                 </li>

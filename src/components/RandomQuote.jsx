@@ -21,7 +21,7 @@ const RandomQuote = () => {
 
   return (
     <div className="tarantino-agrees">
-      <h3>Tarantino agrees with this:</h3>
+      <h3>It sounds like Tarantino:</h3>
       <p>"{quote || "Loading..."}"</p>
     </div>
   );
