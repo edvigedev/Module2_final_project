@@ -29,10 +29,7 @@ const Movie = ({
       <div className={darkTheme ? "movie-card-dark-theme" : "movie-card"}>
         {/* Accéder à l'image via le serveur local */}
 
-        <img
-          src={`${API_URL}/images/posters/${oneMovie.poster}`}
-          alt={`${oneMovie.title} Poster`}
-        />
+        <img src={oneMovie.poster} alt={`${oneMovie.title} Poster`} />
 
         <div className="movie-infos">
           <Link to={`/MovieDetails/${oneMovie.id}`}>
