@@ -14,7 +14,7 @@ import { ThemeContext } from "./contexts/ThemeContext";
 import ActorsDetails from "./pages/ActorsDetails";
 import NewMovie from "./components/NewMovie";
 import EditMovie from "./components/EditMovie";
-import { API_URL } from "../config";
+import { API_URL } from "./config";
 
 function App() {
   const { darkTheme, setDarkTheme } = useContext(ThemeContext);
