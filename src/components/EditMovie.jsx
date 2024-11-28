@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 const EditMovie = ({ movies, setMovies, darkTheme }) => {
   const { movieId } = useParams();

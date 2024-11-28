@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../config";
 
 const RandomCrush = ({ movies, darkTheme, setDarkTheme }) => {
   // Check if the movies array is valid

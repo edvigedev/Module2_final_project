@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Actor from "./Actor";
+import { API_URL } from "../config";
 
 const NewMovie = ({ setMovies, darkTheme }) => {
   const [newMovie, setNewMovie] = useState({
