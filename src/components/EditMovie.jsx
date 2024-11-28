@@ -22,9 +22,7 @@ const EditMovie = ({ movies, setMovies, darkTheme }) => {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:5005/movies/${movieId}`
-        );
+        const response = await axios.get(`${API_URL}/movies/${movieId}`);
         setMovie(response.data);
       } catch (error) {
         console.error("Error fetching movie:", error);
@@ -74,10 +72,7 @@ const EditMovie = ({ movies, setMovies, darkTheme }) => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(
-        `http://localhost:5005/movies/${movieId}`,
-        movie
-      );
+      const response = await axios.put(`${API_URL}/movies/${movieId}`, movie);
       setMovies((prevMovies) =>
         prevMovies.map((m) => (m.id === response.data.id ? response.data : m))
       );

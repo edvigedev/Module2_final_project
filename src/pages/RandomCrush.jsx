@@ -21,7 +21,7 @@ const RandomCrush = ({ movies, darkTheme, setDarkTheme }) => {
         >
           {/* Display the movie poster */}
           <img
-            src={`http://localhost:5005/images/posters/${randomMovie.poster}`}
+            src={`${API_URL}/images/posters/${randomMovie.poster}`}
             alt={`${randomMovie.title} Poster`}
             className="details-poster"
             onError={(e) => (e.target.src = "/path/to/default-image.jpg")} // Fallback image if the poster is not found

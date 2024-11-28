@@ -13,7 +13,7 @@ const Movie = ({
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5005/movies/${oneMovie.id}`);
+      await axios.delete(`${API_URL}/movies/${oneMovie.id}`);
       setMovies((prevMovies) =>
         prevMovies.filter((movie) => movie.id !== oneMovie.id)
       );
@@ -29,7 +29,7 @@ const Movie = ({
         {/* Accéder à l'image via le serveur local */}
 
         <img
-          src={`http://localhost:5005/images/posters/${oneMovie.poster}`}
+          src={`${API_URL}/images/posters/${oneMovie.poster}`}
           alt={`${oneMovie.title} Poster`}
         />
 

@@ -62,10 +62,7 @@ const NewMovie = ({ setMovies, darkTheme }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:5005/movies",
-        newMovie
-      );
+      const response = await axios.post(`${API_URL}/movies`, newMovie);
       setMovies((prevMovies) => [...prevMovies, response.data]); // Update movies state
       alert("Movie added successfully!");
       navigate(`/MovieDetails/${response.data.id}`);

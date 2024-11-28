@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     const getAllTheMovies = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5005/movies");
+        const { data } = await axios.get(`${API_URL}/movies`);
         console.log(data);
         setMovies(data);
       } catch (error) {

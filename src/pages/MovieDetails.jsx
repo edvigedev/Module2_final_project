@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Actor from "../components/Actor";
+import { API_URL } from "../config";
 
 const MovieDetails = ({ movies, setMovies, darkTheme }) => {
   const { movieId } = useParams(); // Extract the `movieId` from the URL
@@ -20,7 +21,7 @@ const MovieDetails = ({ movies, setMovies, darkTheme }) => {
       const fetchMovie = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:5005/movies/${movieId}`
+            `${API_URL}/movies/${movieId}`
           ); // GET request to fetch movie details
           setMovieDetail(response.data); // Set the fetched movie details to state
         } catch (error) {
@@ -59,7 +60,7 @@ const MovieDetails = ({ movies, setMovies, darkTheme }) => {
             <div>
               <img
                 className="details-poster"
-                src={`http://localhost:5005/images/posters/${movieDetail.poster}`}
+                src={`${API_URL}/images/posters/${movieDetail.poster}`}
                 alt={`${movieDetail.title} Poster`}
               />
             </div>
