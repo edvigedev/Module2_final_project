@@ -8,9 +8,9 @@ const Homepage = ({ movies, setMovies, darkTheme, setDarkTheme }) => {
       <p className="crush-description">
         Welcome, Tarantino fans! <br></br>
         We are two developers united by our passion for Quentin Tarantino's
-        iconic masterpieces. Here, you'll find everything a true fan needs
-        insights into his greatest movies and plenty of inspiration for your
-        next cinematic journey. <br></br>
+        iconic masterpieces. Here you'll find everything a true fan needs:
+        insights into his great movies and plenty of inspiration for your next
+        cinematic journey. <br></br>
       </p>
 
       <div className="movie-list">
