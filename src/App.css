@@ -54,6 +54,7 @@ nav {
   align-items: center;
   font-family: Unlock;
   padding: 25px;
+  gap: 20px;
 }
 
 .active {
@@ -152,7 +153,7 @@ footer {
 
 .search-area {
   gap: 20px;
-  padding: 10px;
+  padding: 10%;
   border-radius: 10px;
   color: aliceblue;
   position: absolute;
@@ -175,6 +176,7 @@ footer {
 
 .typing-area input {
   margin-left: 40px;
+  max-width: 60%;
 }
 
 .movie-list {
