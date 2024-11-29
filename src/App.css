@@ -319,6 +319,15 @@ footer {
   background-size: cover;
 }
 
+.new-movie-form-container {
+  color: aliceblue;
+  font-family: "Rockwell", "Clarendon", serif;
+  margin-left: 200px;
+}
+
+.new-movie-form-container button {
+}
+
 .h1-movieDetail {
   font-size: 50px;
   text-align: center;
@@ -658,6 +667,24 @@ footer {
 
 .form-group input {
   margin: 10px 0px;
+}
+
+.form-group-edit button {
+  /* Styling */
+  background-color: #007bff; /* Primary blue color */
+  color: #fff; /* White text for contrast */
+  font-size: 18px; /* Readable font size */
+  font-weight: bold; /* Emphasize the button text */
+  text-align: center; /* Center the text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Smooth rounded corners */
+
+  /* Interaction */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth animation for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  margin: 30px 0px;
+  padding: 10px;
 }
 
 .form-group button {
