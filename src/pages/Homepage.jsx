@@ -2,6 +2,7 @@ import React from "react";
 import Movie from "../components/Movie";
 
 const Homepage = ({ movies, setMovies, darkTheme, setDarkTheme }) => {
+  const sortedMovies = [...movies].sort((a, b) => a.year - b.year);
   return (
     <div className="home-page">
       <h1>Movie Crush</h1>
@@ -14,7 +15,7 @@ const Homepage = ({ movies, setMovies, darkTheme, setDarkTheme }) => {
       </p>
 
       <div className="movie-list">
-        {movies.map((oneMovie) => {
+        {sortedMovies.map((oneMovie) => {
           return (
             <div key={oneMovie.id}>
               <Movie
