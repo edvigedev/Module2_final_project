@@ -7,19 +7,6 @@ Check it out at [this link](https://moviecrushtarantino.netlify.app/Tarantino)
 
 ---
 
-## **Table of Contents**
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Running the Project](#running-the-project)
-- [API Endpoints](#api-endpoints)
-- [Pages Overview](#pages-overview)
-- [Components Overview](#components-overview)
-- [Folder Structure](#folder-structure)
-
----
-
 ## **Features**
 - **Movie Management**:
   - View a collection of movies.
