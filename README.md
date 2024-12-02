@@ -3,6 +3,7 @@
 Welcome to **Movie Crush**, a fan-driven application inspired by Quentin Tarantino's iconic cinematic masterpieces. This app serves as a hub for movie enthusiasts, allowing them to explore, edit, and add their favorite movies, actors, and more!
 
 Check it out at [this link](https://moviecrushtarantino.netlify.app/Tarantino)
+![Screenshot 2024-12-02 at 15 05 41](https://github.com/user-attachments/assets/4f5990ce-7378-45e9-bd94-c65993514bfb)
 
 
 ---
